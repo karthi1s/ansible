@@ -1,0 +1,10 @@
+---
+- hosts: linux
+  tasks:
+  - name: print file contents
+    command: cat testfile.txt
+    register: filecontent
+  - debug: msg="File is empty"
+    when: filecontent.stdout==""
+  - debug: msg="File is not empty"
+    when: filecontent.stdout!=""

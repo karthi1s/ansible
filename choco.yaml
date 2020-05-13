@@ -1,0 +1,7 @@
+---
+- hosts: win
+  tasks:
+  - name: isntall nodepadplusplus
+    win_chocolatey:
+     name: notepadplusplus.install
+     state: absent

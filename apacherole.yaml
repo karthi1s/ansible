@@ -1,0 +1,6 @@
+---
+- hosts: 3.249.61.108
+  become: yes
+  roles:
+  - apache
+
